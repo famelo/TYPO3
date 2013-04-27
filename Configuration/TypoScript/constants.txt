@@ -1,7 +1,7 @@
 config{
 
 	# The <base> tag in the header of the document which is used by RealURL
-	baseURL = http://pld-a.org/
+	baseURL = http://localhost/typo3-dev/
 
 	# Search. This should be disabled if you are not using Indexed search!
 	index_enable = 1
@@ -12,5 +12,5 @@ config{
 	locale_all = en_US.UTF-8
 
 	# Template Extension Path
-	template_path = typo3conf/ext/plda
+	template_path = typo3conf/ext/template
 }

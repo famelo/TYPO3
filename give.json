@@ -1,0 +1,16 @@
+{
+  "variables": [
+    {
+      "name": "baseURL",
+      "question": "Please specify a BaseURL",
+      "default": "http://localhost/typo3-dev/"
+    }
+  ],
+  "replacements": [
+    {
+      "search": "baseURL = http://localhost/typo3-dev/",
+      "replace": "baseURL = {{baseURL}}",
+      "path": "/^Configuration/TypoScript/"
+    }
+  ]
+}
