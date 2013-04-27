@@ -10,7 +10,7 @@
     {
       "search": "baseURL = http://localhost/typo3-dev/",
       "replace": "baseURL = {{baseURL}}",
-      "path": "/^Configuration/TypoScript/"
+      "path": "/^Configuration\/TypoScript/"
     }
   ]
 }
