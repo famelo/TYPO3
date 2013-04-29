@@ -16,5 +16,14 @@
       "search": "typo3conf/ext/template",
       "replace": "typo3conf/ext/{{name}}"
     }
+  ],
+  "submodules": [
+    {
+      "module": "famelo/Bootstrap",
+      "path": "Resources/Public",
+      "variables": {
+        "name": "Public"
+      }
+    }
   ]
 }
