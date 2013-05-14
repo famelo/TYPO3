@@ -1,0 +1,3 @@
+[submodule "Resources/Public"]
+	path = Resources/Public
+	url = https://github.com/famelo/Bootstrap.git

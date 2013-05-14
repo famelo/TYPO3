@@ -3,12 +3,12 @@
     {
       "name": "baseURL",
       "question": "Please specify a BaseURL",
-      "default": "http://localhost/typo3-dev/"
+      "default": "http://localhost/Templates/TYPO3/"
     }
   ],
   "replacements": [
     {
-      "search": "baseURL = http://localhost/typo3-dev/",
+      "search": "baseURL = http://localhost/Templates/TYPO3/",
       "replace": "baseURL = {{baseURL}}",
       "path": "/^Configuration\\/TypoScript/"
     },

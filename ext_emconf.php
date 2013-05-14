@@ -34,10 +34,13 @@ $EM_CONF[$_EXTKEY] = array(
 		'depends' => array(
 			'realurl' => '1.12.2',
 #			'seo_basics' => '0.8.3',
-#			'news' => '1.3.2',
-			'fed' => '4.7.5',
-			'flux' => '4.7.3',
-			'gridelements' => '1.3.12'
+			'gridelements' => '*',
+			'vhs' => '*',
+			'flux' => '*',
+			'fluidpages' => '*',
+			'fluidcontent' => '*',
+			'fluidcontent_bootstrap' => '*',
+			'ws_less' => '*'
 		),
 		'conflicts' => array(
 		),

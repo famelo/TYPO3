@@ -5,7 +5,7 @@ page {
 		10.value (
 			<link rel="shortcut icon" href="{$config.template_path}/Resources/Public/img/favicon.ico" />
 			<link rel="apple-touch-icon" href="{$config.template_path}/Resources/Public/img/apple-touch-icon.png">
-		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+			<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     		<!--[if lt IE 9]>
     		  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     		<![endif]-->
@@ -13,21 +13,17 @@ page {
 	}
 
 	includeCSS {
-		bootstrap = {$config.template_path}/Resources/Public/styles/main.css
-		marc = {$config.template_path}/Resources/Public/styles/marc.css
-		sven = {$config.template_path}/Resources/Public/styles/sven.css
+		bootstrap = {$config.template_path}/Resources/Public/styles/Main.less
+		bootstrap.outputdir = {$config.template_path}/Resources/Public/styles/
 	}
 
 	includeJS{
 		jquery = {$config.template_path}/Resources/Public/components/jquery/jquery.js
-		colorbox = {$config.template_path}/Resources/Public/components/jquery.colorbox/jquery.colorbox-min.js
 		bootstrap-dropdown = {$config.template_path}/Resources/Public/components/bootstrap/js/bootstrap-dropdown.js
 		bootstrap-button = {$config.template_path}/Resources/Public/components/bootstrap/js/bootstrap-button.js
 		bootstrap-tooltip = {$config.template_path}/Resources/Public/components/bootstrap/js/bootstrap-tooltip.js
 		bootstrap-tabs = {$config.template_path}/Resources/Public/components/bootstrap/js/bootstrap-tab.js
 
-		famelo-off-canvas = {$config.template_path}/Resources/Public/components/famelo/components/scripts/off-canvas.js
-		flexslider = {$config.template_path}/Resources/Public/components/flexslider/jquery.flexslider-min.js
 		main = {$config.template_path}/Resources/Public/scripts/main.js
 	}
 }
@@ -43,26 +39,6 @@ config {
 
 	# XML? No, thank you!
 	xmlprologue = none
-
-	html5boilerplate{
-		# This replaces the html tag with some conditional comments for IE and a no-js class
-		htmlTag (
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
-		)
-
-		# Make sure the meta charset is short and sweet
-		metaCharsetTag = <meta charset="|">
-		metaCharsetTag.insertAfter (
-			<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
-			<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	  	)
-	}
-
 
 	# Taking out the trash, aka. cleaning up the code
 
@@ -121,23 +97,43 @@ config {
 
 }
 
-	# Seitentitel entfernen
-	config.noPageTitle = 1
-	page = PAGE
-	page {
-	# Neuen title Tag in headerData setzen
-		headerData {
-			11 = TEXT
-			11 {
-				field = title
-				noTrimWrap = |<title> | - Professional Lighting Designers' Association</title>|
-		  	}
-		}
+# Customize the Page title
+config.noPageTitle = 1
+page = PAGE
+page {
+	headerData {
+		11 = TEXT
+		11 {
+			field = title
+			noTrimWrap = |<title> | - {$config.title}</title>|
+	  	}
 	}
-	
-	# bodyTag
-	page.bodyTag >
-	
-	page.bodyTagCObject = TEXT
-	page.bodyTagCObject.field = uid
-	page.bodyTagCObject.wrap = <body id="page-|"> 
+}
+
+
+
+// Add an id with the page-uid to the body tag
+page.bodyTag >
+page.bodyTagCObject = TEXT
+page.bodyTagCObject.field = uid
+page.bodyTagCObject.wrap = <body id="page-|">
+
+
+
+// Set some useful classes on the html tag to identify crappy ie versions
+config.htmlTag_setParams = class="no-js"
+[browser = < msie7]
+config.htmlTag_setParams = class="no-js ie6 oldie"
+[global]
+[browser = msie7]
+config.htmlTag_setParams = class="no-js ie7 oldie"
+[global]
+[browser = msie8]
+config.htmlTag_setParams = class="no-js ie8 oldie"
+[global]
+[browser = msie9]
+config.htmlTag_setParams = class="no-js ie9 oldie"
+[global]
+[browser = msie10]
+config.htmlTag_setParams = class="no-js ie10 oldie"
+[global]
