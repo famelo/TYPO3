@@ -2,27 +2,20 @@
 <div class="container-main">
 	<div class="masthead">
 		<v:page.menu entryLevel="0" useShortcutData="TRUE">
-			<ul class="nav nav-pills pull-right">
-				<f:for each="{menu}" as="submenuPage" iteration="iteration">
-					<li class="{submenuPage.class}">
-						<a href="{submenuPage.link}" class="{submenuPage.class}">{submenuPage.title}
-							</a>
-					</li>
-				</f:for>
-			</ul>
+			<f:render partial="Navigation/Horizontal" arguments="{menu: menu}" />
 		</v:page.menu>
 
+		<v:page.languageMenu hideNotTranslated="1" order="0,2,3" class="inline"
+		defaultLanguageLabel="DE" defaultIsoFlag="de">
+			<div class="lang">
+				<f:for each="{languageMenu}" as="language">
+					<a href="{language.url}" class="{f:if(condition: language.current, then: 'active'}">
+						{language.label}
+					</a>
+				</f:for>
+			</div>
+		</v:page.languageMenu>
 
-			<v:page.languageMenu hideNotTranslated="1" order="0,2,3" class="inline"
-			defaultLanguageLabel="DE" defaultIsoFlag="de">
-				<div class="lang">
-					<f:for each="{languageMenu}" as="language">
-						<a href="{language.url}" class="{f:if(condition: language.current, then: 'active'}">
-							{language.label}
-						</a>
-					</f:for>
-				</div>
-			</v:page.languageMenu>
 		<h3 class="muted">
 			Project name
 		</h3>

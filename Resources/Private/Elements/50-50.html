@@ -1,0 +1,35 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+{namespace flux=Tx_Flux_ViewHelpers}
+<f:layout name="Content" />
+
+<f:section name="Configuration">
+	<flux:flexform wizardTab="Grids" id="grid-50-50" label="Grid: 50/50" description="Adds a 50/50 Grid">
+
+		<flux:flexform.grid>
+			<flux:flexform.grid.row>
+				<flux:flexform.grid.column>
+					<flux:flexform.content name="left" label="Left" />
+				</flux:flexform.grid.column>
+				<flux:flexform.grid.column>
+					<flux:flexform.content name="right" label="Right" />
+				</flux:flexform.grid.column>
+			</flux:flexform.grid.row>
+		</flux:flexform.grid>
+
+	</flux:flexform>
+</f:section>
+
+<f:section name="Main">
+	<div class="row-fluid">
+		<div class="span6">
+			<flux:flexform.renderContent area="left" />
+		</div>
+		<div class="span6">
+			<flux:flexform.renderContent area="right" />
+		</div>
+	</div>
+</f:section>
+
+<f:section name="Preview">
+	<flux:widget.grid />
+</f:section>
