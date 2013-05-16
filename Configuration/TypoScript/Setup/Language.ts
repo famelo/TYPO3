@@ -5,7 +5,8 @@ config{
 	language = {$config.language}
 
 	# make sure to set this to the language your site is in
-	locale_all = {$config.locale_all}
+	locale_all = {$config.locale_all}.UTF-8
+	htmlTag_langKey = {$config.locale_all}
 
 	# Sets the default system language
 	sys_language_uid = 1
@@ -19,8 +20,3 @@ config{
 	# Setting up the language variable "L" to be passed along with links
 	config.linkVars = L
 }
-
-config.sys_language_uid = 1
-config.language = de
-config.locale_all = de_DE
-config.htmlTag_langKey = de_DE

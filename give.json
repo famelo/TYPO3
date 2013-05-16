@@ -4,6 +4,21 @@
       "name": "baseURL",
       "question": "Please specify a BaseURL",
       "default": "http://localhost/Templates/TYPO3/"
+    },
+    {
+      "name": "pageTitle",
+      "question": "Please specify a title that is appended to each Page Title",
+      "default": "TYPO3 Template"
+    },
+    {
+      "name": "language",
+      "question": "Please specify the default Language",
+      "default": "de"
+    },
+    {
+      "name": "locale",
+      "question": "Please specify the default locale",
+      "default": "de_DE"
     }
   ],
   "replacements": [
@@ -11,6 +26,21 @@
       "search": "baseURL = http://localhost/Templates/TYPO3/",
       "replace": "baseURL = {{baseURL}}",
       "path": "/^Configuration\\/TypoScript/"
+    },
+    {
+      "search": "title = TYPO3 Template",
+      "replace": "title = {{pageTitle}}",
+      "path": "constants.txt"
+    },
+    {
+      "search": "language = en",
+      "replace": "language = {{language}}",
+      "path": "constants.txt"
+    },
+    {
+      "search": "locale_all = en_US",
+      "replace": "locale_all = {{locale}}",
+      "path": "constants.txt"
     },
     {
       "search": "typo3conf/ext/template",

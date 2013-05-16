@@ -67,7 +67,6 @@ config {
 	# Charset, should always be utf-8
 	renderCharset = utf-8
 
-
 	# Search. This should be disabled if you are not using Indexed search!
 
 	# For pages
@@ -75,7 +74,6 @@ config {
 
 	# For documents
 	index_externals = {$config.index_externals}
-
 
 	# Multidomain setup
 
@@ -88,13 +86,11 @@ config {
 	# Spam protection
 	spamProtectEmailAddresses = ascii
 
-
 	# Enable RealURL
 	tx_realurl_enable = 1
 
 	# The <base> tag in the header of the document which is used by RealURL
 	baseURL = {$config.baseURL}
-
 }
 
 # Customize the Page title

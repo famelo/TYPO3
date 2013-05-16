@@ -9,7 +9,7 @@ config{
 
 	# Language and locallization
 	language = en
-	locale_all = en_US.UTF-8
+	locale_all = en_US
 
 	# Template Extension Path
 	template_path = typo3conf/ext/template
