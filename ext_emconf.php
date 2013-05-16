@@ -39,7 +39,6 @@ $EM_CONF[$_EXTKEY] = array(
 			'flux' => '*',
 			'fluidpages' => '*',
 			'fluidcontent' => '*',
-			'fluidcontent_bootstrap' => '*',
 			'ws_less' => '*'
 		),
 		'conflicts' => array(

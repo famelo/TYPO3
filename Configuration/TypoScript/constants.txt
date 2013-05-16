@@ -8,8 +8,8 @@ config{
 	index_externals = 1
 
 	# Language and locallization
-	language = en
-	locale_all = en_US
+	language = de
+	locale_all = de_DE
 
 	# Template Extension Path
 	template_path = typo3conf/ext/template
