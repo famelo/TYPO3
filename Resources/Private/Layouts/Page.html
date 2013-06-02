@@ -1,6 +1,6 @@
 {namespace v=Tx_Vhs_ViewHelpers}
 <div class="container-main">
-	<div class="masthead">
+	<div class="header">
 		<v:page.menu entryLevel="0" useShortcutData="TRUE">
 			<f:render partial="Navigation/Horizontal" arguments="{menu: menu}" />
 		</v:page.menu>
@@ -21,7 +21,9 @@
 		</h3>
 	</div>
 	<hr>
-	<f:render section="Content" />
+	<div class="content">
+		<f:render section="Content" />
+	</div>
 	<hr>
 	<div class="footer">
 		<p>
