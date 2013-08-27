@@ -1,0 +1,30 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+<ul class="nav navbar-nav">
+	<f:for each="{menu}" as="menuItem" iteration="iteration">
+		<f:if condition="{menuItem.hasSubPages}">
+			<f:then>
+				<li class="{menuItem.class} dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">{menuItem.title} <b class="caret"></b></a>
+					<v:page.menu pageUid="{menuItem.uid}" useShortcutData="TRUE">
+						<ul class="dropdown-menu">
+							<f:for each="{menu}" as="subMenuItem">
+								<li>
+									<a href="{subMenuItem.link}" class="{subMenuItem.class}">
+										{subMenuItem.title}
+									</a>
+								</li>
+							</f:for>
+						</ul>
+					</v:page.menu>
+				</li>
+			</f:then>
+			<f:else>
+				<li class="{menuItem.class}">
+					<a href="{menuItem.link}" class="{menuItem.class}">{menuItem.title}
+					</a>
+				</li>
+			</f:else>
+		</f:if>
+	</f:for>
+</ul>
+

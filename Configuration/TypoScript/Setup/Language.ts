@@ -9,7 +9,7 @@ config{
 	htmlTag_langKey = {$config.locale_all}
 
 	# Sets the default system language
-	sys_language_uid = 1
+	sys_language_uid = 0
 
 	# How to handle locallization
 	sys_language_mode = content_fallback

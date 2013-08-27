@@ -5,9 +5,9 @@ tt_content.gridelements_pi1.20.10.setup {
         wrap = <div class="row-fluid">|</div>
         columns {
 			1 < .default
-			1.wrap = <div class="span6">|</div>
+			1.wrap = <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">|</div>
 			2 < .default
-			2.wrap = <div class="span6">|</div>
+			2.wrap = <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">|</div>
 		}
     }
 
@@ -17,11 +17,11 @@ tt_content.gridelements_pi1.20.10.setup {
         wrap = <div class="row-fluid">|</div>
         columns {
 			1 < .default
-			1.wrap = <div class="span4">|</div>
+			1.wrap = <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">|</div>
 			2 < .default
-			2.wrap = <div class="span4">|</div>
+			2.wrap = <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">|</div>
 			3 < .default
-			3.wrap = <div class="span4">|</div>
+			3.wrap = <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">|</div>
 		}
     }
 }

@@ -13,18 +13,13 @@ page {
 	}
 
 	includeCSS {
-		bootstrap = {$config.template_path}/Resources/Public/styles/Main.less
-		bootstrap.outputdir = {$config.template_path}/Resources/Public/styles/
+		bootstrap = {$config.template_path}/Resources/Public/Styles/Main.less
+		bootstrap.outputdir = {$config.template_path}/Resources/Public/Styles/
 	}
 
 	includeJS{
-		jquery = {$config.template_path}/Resources/Public/components/jquery/jquery.js
-		bootstrap-dropdown = {$config.template_path}/Resources/Public/components/bootstrap/js/bootstrap-dropdown.js
-		bootstrap-button = {$config.template_path}/Resources/Public/components/bootstrap/js/bootstrap-button.js
-		bootstrap-tooltip = {$config.template_path}/Resources/Public/components/bootstrap/js/bootstrap-tooltip.js
-		bootstrap-tabs = {$config.template_path}/Resources/Public/components/bootstrap/js/bootstrap-tab.js
-
-		main = {$config.template_path}/Resources/Public/scripts/main.js
+		jquery = {$config.template_path}/Resources/Public/Components/jquery/jquery.js
+		main = {$config.template_path}/Resources/Public/Scripts/Main.min.js
 	}
 }
 
