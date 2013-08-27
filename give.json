@@ -3,7 +3,7 @@
     {
       "name": "baseURL",
       "question": "Please specify a BaseURL",
-      "default": "http://localhost/Templates/TYPO3-LTS/"
+      "default": "http://localhost/Templates/TYPO3-6/"
     },
     {
       "name": "pageTitle",
@@ -23,7 +23,7 @@
   ],
   "replacements": [
     {
-      "search": "baseURL = http://localhost/Templates/TYPO3-LTS/",
+      "search": "baseURL = http://localhost/Templates/TYPO3-6/",
       "replace": "baseURL = {{baseURL}}",
       "path": "/^Configuration\\/TypoScript/"
     },
