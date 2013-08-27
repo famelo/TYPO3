@@ -4,10 +4,10 @@ tt_content.gridelements_pi1.20.10.setup {
 	1 {
         wrap = <div class="row-fluid">|</div>
         columns {
+			0 < .default
+			0.wrap = <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">|</div>
 			1 < .default
 			1.wrap = <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">|</div>
-			2 < .default
-			2.wrap = <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">|</div>
 		}
     }
 
