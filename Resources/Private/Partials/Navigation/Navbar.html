@@ -19,15 +19,15 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">{menuItem.title} <b class="caret"></b></a>
 						<v:page.menu pageUid="{menuItem.uid}" useShortcutData="TRUE">
-						<ul class="dropdown-menu" role="menu">
-							<f:for each="{menu}" as="subMenuItem">
-								<li>
-									<a href="{subMenuItem.link}" class="{subMenuItem.class}">
-										{subMenuItem.title}
-									</a>
-								</li>									
-							</f:for>							
-						</ul>
+							<ul class="dropdown-menu" role="menu">
+								<f:for each="{menu}" as="subMenuItem">
+									<li>
+										<a href="{subMenuItem.link}" class="{subMenuItem.class}">
+											{subMenuItem.title}
+										</a>
+									</li>									
+								</f:for>							
+							</ul>
 						</v:page.menu>
 					</li>
 				</f:then>
