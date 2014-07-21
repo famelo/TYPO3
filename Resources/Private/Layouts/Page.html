@@ -1,21 +1,7 @@
 {namespace v=Tx_Vhs_ViewHelpers}
-<div class="navbar navbar-inverse navbar-fixed-top">
-	<div class="container">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#">Project name</a>
-		</div>
-		<div class="collapse navbar-collapse">
-			<v:page.menu entryLevel="0" useShortcutData="TRUE">
-				<f:render partial="Navigation/Navbar" arguments="{menu: menu}" />
-			</v:page.menu>
-		</div>
-	</div>
-</div>
+<v:page.menu entryLevel="0" useShortcutData="TRUE">
+	<f:render partial="Navigation/Navbar" arguments="{menu: menu}" />
+</v:page.menu>
 <div class="container">
 	<f:render section="Content" />
 </div>

@@ -18,8 +18,9 @@ page {
 	}
 
 	includeJS{
-		jquery = {$config.template_path}/Resources/Public/Components/jquery/jquery.js
-		main = {$config.template_path}/Resources/Public/Scripts/Main.min.js
+		jquery = {$config.template_path}/Resources/Public/Components/jquery/dist/jquery.min.js
+		bootstrap = {$config.template_path}/Resources/Public/Components/bootstrap/dist/js/bootstrap.min.js
+		main = {$config.template_path}/Resources/Public/Scripts/Main.js
 	}
 }
 
