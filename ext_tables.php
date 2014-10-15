@@ -3,4 +3,5 @@ if (!defined('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript/', $_EXTKEY . ' Template');
+Tx_Flux_Core::registerProviderExtensionKey('template', 'Page');
 ?>
