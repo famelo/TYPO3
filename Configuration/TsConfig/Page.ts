@@ -61,3 +61,14 @@ TCEFORM.tt_content {
 		}
 	}
 }
+
+#----------------------------------------------------------
+#	Permissions for new Pages
+#----------------------------------------------------------
+TCEMAIN {
+	permissions.userid = 1
+	permissions.groupid = 1
+	user = show,edit,delete,new,editcontent
+	group = show,edit,delete,new,editcontent
+	everybody show,edit,delete,new,editcontent
+}
