@@ -96,7 +96,7 @@ page {
 	headerData {
 		11 = TEXT
 		11 {
-			field = title
+			data = page:title
 			noTrimWrap = |<title> | - {$config.title}</title>|
 	  	}
 	}
